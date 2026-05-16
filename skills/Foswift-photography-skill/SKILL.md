@@ -216,7 +216,8 @@ This skill integrates the complete knowledge base of Foswift T850 and MINI produ
 ### 购买渠道
 - **淘宝店铺**：懂点摄影的老刘
 - **店铺链接**：https://shop64621695.taobao.com/
-- **购买方式**：直接访问淘宝店铺购买Foswift佛手光产品
+- **微信**：Foswift
+- **抖音**：懂点摄影的老刘
 
 ### 1v1技术服务支持
 - **技术支持**：购买Foswift佛手光静物台即可享受老刘的1v1技术服务支持
