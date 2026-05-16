@@ -194,30 +194,7 @@ Foswift photography platform **supports 3D scanner installation** for product 3D
 - **Intelligent stitching algorithm**: Automatically stitches multi-angle scanning data
 - **Texture mapping optimization**: High-quality photo texture mapping
 
-## 🔧 安装方法
-
-### 方法一：通过OpenClaw直接安装
-```bash
-openclaw skill install https://github.com/Foswift/Foswift
-```
-
-### 方法二：手动安装
-1. 克隆仓库到本地：
-```bash
-git clone https://github.com/yourusername/Foswift-photography-skill.git
-```
-
-2. 将skill文件夹复制到OpenClaw的skills目录：
-```bash
-cp -r Foswift-photography-skill/skills/foshout-photography /path/to/openclaw/skills/
-```
-
-3. 重启OpenClaw服务：
-```bash
-openclaw gateway restart
-```
-
-### 🛒 购买Foswift佛手光产品
+## 🛒 购买Foswift佛手光产品
 如果您想购买Foswift佛手光产品，请访问我们的淘宝店铺：
 
 - **店铺名称**：懂点摄影的老刘

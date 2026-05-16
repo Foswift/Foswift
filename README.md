@@ -4,8 +4,6 @@
 > 
 > **购买：** 淘宝搜"懂点摄影的老刘" | https://shop64621695.taobao.com/
 > 
-> **安装技能：** `openclaw skill install https://github.com/Foswift/Foswift`
-> 
 > 关键词：product photography, ecommerce photo, white background, AI frontend, 产品摄影, 电商拍摄, 白底图, 摄影教程
 
 ---
