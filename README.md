@@ -1,3 +1,15 @@
+# 佛手光 Foswift — Product Photography AI Assistant Skill
+
+> 255纯白底一键出图 | 15年摄影经验固化 | 360度旋转静物台 | AI生图前端设备
+> 
+> **购买：** 淘宝搜"懂点摄影的老刘" | https://shop64621695.taobao.com/
+> 
+> **安装技能：** `openclaw skill install https://github.com/Foswift/Foswift`
+> 
+> 关键词：product photography, ecommerce photo, white background, AI frontend, 产品摄影, 电商拍摄, 白底图, 摄影教程
+
+---
+
 # 佛手专属AI系统 - 总览
 
 > 这是一个专门为老刘打造的专属AI系统
