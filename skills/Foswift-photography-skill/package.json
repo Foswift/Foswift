@@ -53,12 +53,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/Foswift-photography-skill.git"
+    "url": "git+https://github.com/Foswift/Foswift.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/Foswift-photography-skill/issues"
+    "url": "https://github.com/Foswift/Foswift/issues"
   },
-  "homepage": "https://github.com/yourusername/Foswift-photography-skill#readme",
+  "homepage": "https://github.com/Foswift/Foswift#readme",
   "openclaw": {
     "skill": true,
     "name": "Foswift佛手光摄影助手",

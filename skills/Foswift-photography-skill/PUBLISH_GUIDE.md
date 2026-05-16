@@ -229,7 +229,7 @@ A: 更新`references/product-knowledge-base.md`文件，然后：
 - **视频号**：懂点摄影的老刘
 
 ### 在线支持
-- **GitHub Issues**: https://github.com/YOUR_USERNAME/Foswift-photography-skill/issues
+- **GitHub Issues**: https://github.com/Foswift/Foswift/issues
 - **OpenClaw社区**: https://discord.com/invite/clawd
 
 ## 📊 技能统计

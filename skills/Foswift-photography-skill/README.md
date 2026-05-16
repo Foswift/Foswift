@@ -185,7 +185,7 @@ Foswift photography platform **supports 3D scanner installation** for product 3D
 
 ### 方法一：通过OpenClaw直接安装
 ```bash
-openclaw skill install https://github.com/yourusername/Foswift-photography-skill
+openclaw skill install https://github.com/Foswift/Foswift
 ```
 
 ### 方法二：手动安装
@@ -343,7 +343,7 @@ foshout-photography/
 
 ### 作者
 **超级助理** - Foswift佛手光专业助手
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@Foswift](https://github.com/Foswift)
 
 ## 🙏 致谢
 
