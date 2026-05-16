@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>爆款链接收集工具 - 设计师专用</title>
+    <style>
+        body { font-family: '微软雅黑', Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; border-bottom: 3px solid #ff5000; padding-bottom: 10px; }
+        h2 { color: #ff5000; margin-top: 30px; }
+        .tool-box { background: #f0f8ff; padding: 20px; border-radius: 10px; margin: 20px 0; border: 2px solid #0066cc; }
+        .step { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #ff5000; }
+        .link-input { width: 100%; padding: 10px; margin: 10px 0; border: 2px solid #ddd; border-radius: 5px; font-size: 14px; }
+        .btn { background: #ff5000; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .btn:hover { background: #ff3300; }
+        .design-checklist { background: #fff5ee; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .checklist-item { margin: 8px 0; padding-left: 20px; position: relative; }
+        .checklist-item:before { content: "✓"; position: absolute; left: 0; color: #ff5000; }
+    </style>
+    <script>
+        function addLink() {
+            const category = document.getElementById('category').value;
+            const productName = document.getElementById('productName').value;
+            const link = document.getElementById('taobaoLink').value;
+            
+            if (!category || !productName || !link) {
+                alert('请填写所有字段！');
+                return;
+            }
+            
+            // 提取商品ID
+            let itemId = '';
+            const idMatch = link.match(/id=(\d+)/);
+            if (idMatch) {
+                itemId = idMatch[1];
+            }
+            
+            const table = document.getElementById('linksTable');
+            const newRow = table.insertRow(-1);
+            
+            newRow.innerHTML = `
+                <td>${table.rows.length}</td>
+                <td>${category}</td>
+                <td>${productName}</td>
+                <td><a href="${link}" target="_blank">点击查看</a></td>
+                <td>${itemId || '未提取到ID'}</td>
+                <td><button onclick="this.parentElement.parentElement.remove()">删除</button></td>
+            `;
+            
+            // 清空表单
+            document.getElementById('productName').value = '';
+            document.getElementById('taobaoLink').value = '';
+        }
+        
+        function exportCSV() {
+            const rows = document.getElementById('linksTable').rows;
+            let csv = '序号,类目,商品名称,商品链接,商品ID\n';
+            
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].cells;
+                const link = cells[3].querySelector('a')?.href || '';
+                const id = cells[4].textContent;
+                csv += `${cells[0].textContent},${cells[1].textContent},"${cells[2].textContent}",${link},${id}\n`;
+            }
+            
+            const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '爆款商品链接收集_' + new Date().toISOString().split('T')[0] + '.csv';
+            link.click();
+        }
+    </script>
+</head>
+<body>
+    <h1>🛠️ 爆款链接收集工具 - 设计师专用</h1>
+    
+    <div class="tool-box">
+        <h2>🔗 第一步：获取爆款商品链接</h2>
+        
+        <div class="step">
+            <h3>方法1：淘宝APP获取</h3>
+            <ol>
+                <li>打开淘宝APP</li>
+                <li>搜索你想要分析的类目（如"羽绒服"）</li>
+                <li>点击"销量"排序</li>
+                <li>找到销量高的爆款商品</li>
+                <li>点击进入商品详情页</li>
+                <li>点击右上角"..." → "复制链接"</li>
+            </ol>
+        </div>
+        
+        <div class="step">
+            <h3>方法2：电脑浏览器获取</h3>
+            <ol>
+                <li>打开淘宝网站 (taobao.com)</li>
+                <li>搜索类目关键词</li>
+                <li>按销量排序</li>
+                <li>右键点击商品 → "复制链接地址"</li>
+                <li>或者进入详情页后复制浏览器地址栏URL</li>
+            </ol>
+        </div>
+        
+        <div class="step">
+            <h3>链接格式示例：</h3>
+            <code>https://item.taobao.com/item.htm?id=1234567890</code><br>
+            <code>https://detail.tmall.com/item.htm?id=1234567890</code>
+        </div>
+    </div>
+    
+    <div class="tool-box">
+        <h2>📝 第二步：添加到收集表</h2>
+        
+        <div>
+            <label>选择类目：</label>
+            <select id="category">
+                <option value="">选择类目</option>
+                <option value="女装">女装</option>
+                <option value="男装">男装</option>
+                <option value="美食">美食</option>
+                <option value="美妆">美妆</option>
+                <option value="数码">数码</option>
+                <option value="家居">家居</option>
+                <option value="母婴">母婴</option>
+                <option value="户外">户外</option>
+                <option value="宠物">宠物</option>
+                <option value="文具">文具</option>
+            </select>
+        </div>
+        
+        <div style="margin-top: 15px;">
+            <label>商品名称：</label><br>
+            <input type="text" id="productName" placeholder="例如：波司登轻薄羽绒服" class="link-input">
+        </div>
+        
+        <div style="margin-top: 15px;">
+            <label>淘宝链接：</label><br>
+            <input type="text" id="taobaoLink" placeholder="粘贴淘宝商品链接" class="link-input">
+        </div>
+        
+        <button class="btn" onclick="addLink()" style="margin-top: 15px;">添加到收集表</button>
+    </div>
+    
+    <h2>📋 爆款链接收集表</h2>
+    
+    <table id="linksTable" border="1" style="width:100%; border-collapse:collapse; margin-top:20px;">
+        <thead>
+            <tr style="background:#ff5000; color:white;">
+                <th>#</th>
+                <th>类目</th>
+                <th>商品名称</th>
+                <th>商品链接</th>
+                <th>商品ID</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 动态添加行 -->
+        </tbody>
+    </table>
+    
+    <button class="btn" onclick="exportCSV()" style="margin-top: 20px;">导出为CSV文件</button>
+    
+    <h2>🔍 第三步：设计分析清单</h2>
+    
+    <div class="design-checklist">
+        <h3>点击链接后，检查以下设计要素：</h3>
+        
+        <div class="checklist-item"><strong>主图设计：</strong>构图是否吸引人？色彩搭配如何？产品展示角度？</div>
+        <div class="checklist-item"><strong>详情页布局：</strong>信息层级是否清晰？卖点展示顺序？</div>
+        <div class="checklist-item"><strong>视觉风格：</strong>字体选择是否合适？配色方案？图标使用？</div>
+        <div class="checklist-item"><strong>营销文案：</strong>标题是否吸引点击？痛点描述是否准确？</div>
+        <div class="checklist-item"><strong>信任建立：</strong>如何展示评价？销量证明？认证标识？</div>
+        <div class="checklist-item"><strong>行动引导：</strong>购买按钮是否明显？优惠信息是否突出？</div>
+    </div>
+    
+    <div class="design-checklist">
+        <h3>佛手光设计借鉴思考：</h3>
+        
+        <div class="checklist-item">这个爆款的第一眼吸引力是什么？</div>
+        <div class="checklist-item">前3屏如何抓住用户注意力？</div>
+        <div class="checklist-item">视觉设计如何支持产品卖点？</div>
+        <div class="checklist-item">哪些设计元素可以应用到佛手光？</div>
+        <div class="checklist-item">这个爆款解决了用户的什么痛点？</div>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 20px; background: #e8f5e9; border-radius: 8px;">
+        <h3>💡 设计师的专业视角</h3>
+        <p>你不是在看"商品"，而是在看"设计解决方案"。每个爆款背后都有一个成功的设计策略。思考：</p>
+        <ul>
+            <li>为什么这个设计能成为爆款？</li>
+            <li>视觉元素如何影响购买决策？</li>
+            <li>如何将这些洞察应用到佛手光的设计中？</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

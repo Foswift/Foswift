@@ -1,0 +1,172 @@
+{
+  "1": {
+    "name": "01_背景",
+    "file": "01_背景.png",
+    "editable": false
+  },
+  "2": {
+    "name": "02_首屏标题文字",
+    "file": "02_首屏标题文字.png",
+    "editable": false
+  },
+  "3": {
+    "name": "03_首屏产品图_可替换",
+    "file": "03_首屏产品图_可替换.png",
+    "editable": true
+  },
+  "4": {
+    "name": "04_卖点区背景",
+    "file": "04_卖点区背景.png",
+    "editable": false
+  },
+  "5": {
+    "name": "05_卖点标题文字",
+    "file": "05_卖点标题文字.png",
+    "editable": false
+  },
+  "6": {
+    "name": "06_卖点1_可编辑",
+    "file": "06_卖点1_可编辑.png",
+    "editable": true
+  },
+  "7": {
+    "name": "07_卖点2_可编辑",
+    "file": "07_卖点2_可编辑.png",
+    "editable": true
+  },
+  "8": {
+    "name": "08_卖点3_可编辑",
+    "file": "08_卖点3_可编辑.png",
+    "editable": true
+  },
+  "9": {
+    "name": "09_卖点4_可编辑",
+    "file": "09_卖点4_可编辑.png",
+    "editable": true
+  },
+  "10": {
+    "name": "10_对比区背景",
+    "file": "10_对比区背景.png",
+    "editable": false
+  },
+  "11": {
+    "name": "11_对比标题文字",
+    "file": "11_对比标题文字.png",
+    "editable": false
+  },
+  "12": {
+    "name": "12_对比左侧_可编辑",
+    "file": "12_对比左侧_可编辑.png",
+    "editable": true
+  },
+  "13": {
+    "name": "13_VS标识",
+    "file": "13_VS标识.png",
+    "editable": false
+  },
+  "14": {
+    "name": "14_对比右侧_可编辑",
+    "file": "14_对比右侧_可编辑.png",
+    "editable": true
+  },
+  "15": {
+    "name": "15_产品展示背景",
+    "file": "15_产品展示背景.png",
+    "editable": false
+  },
+  "16": {
+    "name": "16_产品展示标题文字",
+    "file": "16_产品展示标题文字.png",
+    "editable": false
+  },
+  "17": {
+    "name": "17_产品图1_可替换",
+    "file": "17_产品图1_可替换.png",
+    "editable": true
+  },
+  "18": {
+    "name": "18_产品图2_可替换",
+    "file": "18_产品图2_可替换.png",
+    "editable": true
+  },
+  "19": {
+    "name": "19_产品图3_可替换",
+    "file": "19_产品图3_可替换.png",
+    "editable": true
+  },
+  "20": {
+    "name": "20_场景区背景",
+    "file": "20_场景区背景.png",
+    "editable": false
+  },
+  "21": {
+    "name": "21_场景标题文字",
+    "file": "21_场景标题文字.png",
+    "editable": false
+  },
+  "22": {
+    "name": "22_场景1_可编辑",
+    "file": "22_场景1_可编辑.png",
+    "editable": true
+  },
+  "23": {
+    "name": "23_场景2_可编辑",
+    "file": "23_场景2_可编辑.png",
+    "editable": true
+  },
+  "24": {
+    "name": "24_场景3_可编辑",
+    "file": "24_场景3_可编辑.png",
+    "editable": true
+  },
+  "25": {
+    "name": "25_案例区背景",
+    "file": "25_案例区背景.png",
+    "editable": false
+  },
+  "26": {
+    "name": "26_案例标题文字",
+    "file": "26_案例标题文字.png",
+    "editable": false
+  },
+  "27": {
+    "name": "27_案例引用卡片_可编辑",
+    "file": "27_案例引用卡片_可编辑.png",
+    "editable": true
+  },
+  "28": {
+    "name": "28_参数区背景",
+    "file": "28_参数区背景.png",
+    "editable": false
+  },
+  "29": {
+    "name": "29_参数标题文字",
+    "file": "29_参数标题文字.png",
+    "editable": false
+  },
+  "30": {
+    "name": "30_参数表格_可编辑",
+    "file": "30_参数表格_可编辑.png",
+    "editable": true
+  },
+  "31": {
+    "name": "31_CTA背景",
+    "file": "31_CTA背景.png",
+    "editable": false
+  },
+  "32": {
+    "name": "32_CTA标题文字",
+    "file": "32_CTA标题文字.png",
+    "editable": false
+  },
+  "33": {
+    "name": "33_CTA按钮_可编辑",
+    "file": "33_CTA按钮_可编辑.png",
+    "editable": true
+  },
+  "34": {
+    "name": "34_CTA联系信息_可编辑",
+    "file": "34_CTA联系信息_可编辑.png",
+    "editable": true
+  }
+}

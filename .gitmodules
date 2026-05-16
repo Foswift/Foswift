@@ -1,0 +1,3 @@
+[submodule "skills/jinguyuan-dumpling-skill"]
+	path = skills/jinguyuan-dumpling-skill
+	url = https://github.com/JinGuYuan/jinguyuan-dumpling-skill.git

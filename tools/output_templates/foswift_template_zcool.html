@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佛手光详情页模板 - 基于站酷设计</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            color: #333;
+        }
+
+        /* 通用样式 */
+        .section {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 第1层：首屏区 */
+        .hero-section {
+            height: 800px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 30px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .hero-cta {
+            background: #fff200;
+            color: #333;
+            padding: 20px 60px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        /* 第2层：效率对比区 */
+        .comparison-section {
+            height: 600px;
+            background: #fff200;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .comparison-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .comparison-content {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .comparison-item {
+            width: 45%;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .comparison-item.highlight {
+            background: #333;
+            color: #fff;
+        }
+
+        .comparison-time {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .comparison-label {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* 第3层：核心功能区 */
+        .features-section {
+            min-height: 800px;
+            background: #fffef4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* 第4层：拍摄效果区 */
+        .showcase-section {
+            min-height: 1000px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .showcase-item {
+            width: 100%;
+            margin-bottom: 30px;
+            background: #fcfcfc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .showcase-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .showcase-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .showcase-desc {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 第5层：适用场景区 */
+        .scenarios-section {
+            min-height: 800px;
+            background: #fffef4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .scenario-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .scenario-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .scenario-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .scenario-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* 第6层：客户案例区 */
+        .cases-section {
+            min-height: 800px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .case-item {
+            width: 100%;
+            background: #fcfcfc;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .case-quote {
+            font-size: 18px;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .case-author {
+            font-size: 14px;
+            color: #666;
+            text-align: right;
+        }
+
+        /* 第7层：技术参数区 */
+        .specs-section {
+            min-height: 600px;
+            background: #fcfcfc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .specs-table {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .spec-row {
+            display: flex;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .spec-label {
+            width: 30%;
+            padding: 15px;
+            background: #fcfcfc;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .spec-value {
+            width: 70%;
+            padding: 15px;
+            color: #666;
+        }
+
+        /* 第8层：售后保障区 */
+        .support-section {
+            min-height: 500px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .support-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .support-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .support-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .support-desc {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 第9层：底部CTA区 */
+        .bottom-cta-section {
+            height: 300px;
+            background: #fff200;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .bottom-cta-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .bottom-cta-button {
+            background: #333;
+            color: #fff;
+            padding: 20px 80px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 第1层：首屏区 -->
+    <div class="section hero-section">
+        <div style="width: 100%; height: 400px; background: #f5f5f5; display: flex; justify-content: center; align-items: center; margin-bottom: 30px; border-radius: 10px;">
+            <div style="color: #999; font-size: 20px;">【佛手光产品主图区域】</div>
+        </div>
+        <h1 class="hero-title">佛手光静物台</h1>
+        <p class="hero-subtitle">5-10秒出图 · 纯白底技术 · 傻瓜式操作<br>让每个电商卖家都能拍出专业产品图</p>
+        <a href="#" class="hero-cta">立即咨询</a>
+    </div>
+
+    <!-- 第2层：效率对比区 -->
+    <div class="section comparison-section">
+        <h2 class="comparison-title">传统摄影 vs 佛手光</h2>
+        <div class="comparison-content">
+            <div class="comparison-item">
+                <div class="comparison-time">40分钟</div>
+                <div class="comparison-label">传统方式</div>
+                <div style="font-size: 14px; color: #666; line-height: 1.6;">
+                    布光15分钟<br>
+                    调参数10分钟<br>
+                    拍摄5分钟<br>
+                    修图10分钟
+                </div>
+            </div>
+            <div class="comparison-item highlight">
+                <div class="comparison-time" style="color: #fff200;">5-10秒</div>
+                <div class="comparison-label">佛手光</div>
+                <div style="font-size: 14px; color: #fff; line-height: 1.6;">
+                    一步到位<br>
+                    无需修图<br>
+                    拍摄即白底<br>
+                    专业品质
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第3层：核心功能区 -->
+    <div class="section features-section">
+        <h2 class="title">核心功能</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">纯白底技术</div>
+                <div class="feature-desc">一次性拍摄得到255纯白底，无需后期修图</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-title">360度旋转</div>
+                <div class="feature-desc">市面最好的旋转效果，完美展示产品各个角度</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">智能光线</div>
+                <div class="feature-desc">自动调节光线，傻瓜式操作，一天学会</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">多功能拍摄</div>
+                <div class="feature-desc">白底/黑底/绿背景/场景图，一台设备多种用途</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第4层：拍摄效果区 -->
+    <div class="section showcase-section">
+        <h2 class="title">拍摄效果展示</h2>
+        <div class="showcase-item">
+            <div class="showcase-placeholder">【白底图示例】</div>
+            <div class="showcase-title">纯白底产品图</div>
+            <div class="showcase-desc">一次性拍摄得到255纯白底，无需后期修图</div>
+        </div>
+        <div class="showcase-item">
+            <div class="showcase-placeholder">【场景图示例】</div>
+            <div class="showcase-title">场景图</div>
+            <div class="showcase-desc">快速切换背景，拍摄高质量场景图</div>
+        </div>
+    </div>
+
+    <!-- 第5层：适用场景区 -->
+    <div class="section scenarios-section">
+        <h2 class="title">适用场景</h2>
+        <div class="scenarios-grid">
+            <div class="scenario-card">
+                <div class="scenario-icon">🛒</div>
+                <div class="scenario-title">电商卖家</div>
+                <div class="scenario-desc">淘宝、天猫、京东、拼多多等电商平台产品拍摄</div>
+            </div>
+            <div class="scenario-card">
+                <div class="scenario-icon">🌍</div>
+                <div class="scenario-title">跨境电商</div>
+                <div class="scenario-desc">亚马逊、速卖通、TikTok Shop等跨境平台</div>
+            </div>
+            <div class="scenario-card">
+                <div class="scenario-icon">📱</div>
+                <div class="scenario-title">自媒体创业</div>
+                <div class="scenario-desc">抖音、小红书、视频号等内容创作者</div>
+            </div>
+            <div class="scenario-card">
+                <div class="scenario-icon">💍</div>
+                <div class="scenario-title">首饰珠宝</div>
+                <div class="scenario-desc">首饰、化妆品、小五金、美食等小产品</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第6层：客户案例区 -->
+    <div class="section cases-section">
+        <h2 class="title">客户反馈</h2>
+        <div class="case-item">
+            <div class="case-quote">"以前拍一张产品图要40分钟，现在5-10秒就搞定了，效率提升了近200倍！佛手光真是我们电商卖家的神器！"</div>
+            <div class="case-author">—— 某淘宝店主</div>
+        </div>
+        <div class="case-item">
+            <div class="case-quote">"不懂摄影也能拍出专业级别的产品图，纯白底技术太厉害了，完全不用后期修图！"</div>
+            <div class="case-author">—— 某拼多多卖家</div>
+        </div>
+    </div>
+
+    <!-- 第7层：技术参数区 -->
+    <div class="section specs-section">
+        <h2 class="title">技术参数</h2>
+        <div class="specs-table">
+            <div class="spec-row">
+                <div class="spec-label">产品型号</div>
+                <div class="spec-value">T850 / MINI</div>
+            </div>
+            <div class="spec-row">
+                <div class="spec-label">适用产品</div>
+                <div class="spec-value">T850：50cm以内产品 / MINI：30cm以内产品</div>
+            </div>
+            <div class="spec-row">
+                <div class="spec-label">空间要求</div>
+                <div class="spec-value">T850：2.5×2.5米 / MINI：可折叠，不占空间</div>
+            </div>
+            <div class="spec-row">
+                <div class="spec-label">核心功能</div>
+                <div class="spec-value">纯白底、360度旋转、智能光线、多功能拍摄</div>
+            </div>
+            <div class="spec-row">
+                <div class="spec-label">售后服务</div>
+                <div class="spec-value">1年技术支持，随时解答问题</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第8层：售后保障区 -->
+    <div class="section support-section">
+        <h2 class="title">售后保障</h2>
+        <div class="support-grid">
+            <div class="support-item">
+                <div class="support-icon">📞</div>
+                <div class="support-title">1年技术支持</div>
+                <div class="support-desc">随时解答技术问题</div>
+            </div>
+            <div class="support-item">
+                <div class="support-icon">🛠️</div>
+                <div class="support-title">专业指导</div>
+                <div class="support-desc">一对一使用指导</div>
+            </div>
+            <div class="support-item">
+                <div class="support-icon">✅</div>
+                <div class="support-title">质量保证</div>
+                <div class="support-desc">品质无忧，放心使用</div>
+            </div>
+            <div class="support-item">
+                <div class="support-icon">💬</div>
+                <div class="support-title">快速响应</div>
+                <div class="support-desc">抖音私信/微信随时联系</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第9层：底部CTA区 -->
+    <div class="section bottom-cta-section">
+        <h2 class="bottom-cta-title">立即开始专业拍摄</h2>
+        <a href="#" class="bottom-cta-button">立即咨询</a>
+        <div class="contact-info">
+            抖音搜索"懂点摄影的老刘" | 微信私信咨询
+        </div>
+    </div>
+
+</body>
+</html>

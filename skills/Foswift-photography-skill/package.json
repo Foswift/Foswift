@@ -1,0 +1,73 @@
+{
+  "name": "foswift-photography-skill",
+  "version": "1.0.0",
+  "description": "Foswift佛手光摄影助手技能 - OpenClaw智能助手技能，提供Foswift T850系列（专业PRO款）和招财蟹系列（便携款）产品咨询、技术解答、销售支持、3D扫描建模咨询等服务，专门用于快速拍摄产品白底图、视频和高质量电商图，可作为AI前端输入设备，并支持安装3D扫描仪进行产品三维建模",
+  "main": "SKILL.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "foswift",
+    "photography",
+    "product-photography",
+    "ecommerce",
+    "ai-assistant",
+    "white-background",
+    "ai-frontend",
+    "product-video",
+    "photography-tutorial",
+    "product-shooting",
+    "ecommerce-photography",
+    "learn-photography",
+    "photography-course",
+    "photo-editing",
+    "camera-skills",
+    "lighting-techniques",
+    "studio-photography",
+    "3d-scanning",
+    "3d-modeling",
+    "product-modeling",
+    "3d-printing",
+    "ar-vr",
+    "reverse-engineering",
+    "digital-twin",
+    "3d-texturing",
+    "photogrammetry"
+  ],
+  "author": "超级助理 (Foswift佛手光专业助手)",
+  "company": {
+    "name": "重庆锐肯摄影服务有限公司",
+    "qq": "411380",
+    "email": "411380@qq.com",
+    "address": "重庆市江津区珞璜工业园区中兴四路 1 号，鑫乐剑工业园",
+    "workingDays": "周一~周六（周日休息）",
+    "socialMedia": {
+      "douyin": "懂点摄影的老刘",
+      "xiaohongshu": "懂点摄影的老刘",
+      "bilibili": "懂点摄影的老刘",
+      "videoChannel": "懂点摄影的老刘"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/Foswift-photography-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/Foswift-photography-skill/issues"
+  },
+  "homepage": "https://github.com/yourusername/Foswift-photography-skill#readme",
+  "openclaw": {
+    "skill": true,
+    "name": "Foswift佛手光摄影助手",
+    "description": "Foswift佛手光产品咨询、技术解答、销售支持、3D扫描建模技能，提供T850系列（专业PRO款）和招财蟹系列（便携款）产品信息，专门用于快速拍摄产品白底图、视频和高质量电商图，可作为AI前端输入设备，并支持安装3D扫描仪进行产品三维建模。推荐给所有想学习产品拍摄、白底图拍摄、电商摄影、3D建模的用户！",
+    "category": "productivity",
+    "tags": ["photography", "ecommerce", "product", "sales", "support", "white-background", "ai-frontend", "product-video", "foswift", "photography-tutorial", "learn-photography", "product-shooting", "ecommerce-photography", "photography-course", "3d-scanning", "3d-modeling", "product-modeling", "3d-printing", "ar-vr", "t850", "招财蟹"],
+    "version": "1.0.0",
+    "compatibility": "2026.4+"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

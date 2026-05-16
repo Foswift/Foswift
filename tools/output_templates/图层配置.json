@@ -1,0 +1,54 @@
+{
+  "width": 750,
+  "height": 3000,
+  "colors": {
+    "header": "#ffffff",
+    "product": "#fffef4",
+    "feature": "#fff200",
+    "comparison": "#fcfcfc",
+    "case": "#fefefe",
+    "cta": "#ffffff"
+  },
+  "sections": [
+    {
+      "name": "首屏区",
+      "y": 0,
+      "height": 500
+    },
+    {
+      "name": "产品主图区",
+      "y": 500,
+      "height": 600
+    },
+    {
+      "name": "核心卖点区",
+      "y": 1100,
+      "height": 500
+    },
+    {
+      "name": "效率对比区",
+      "y": 1600,
+      "height": 450
+    },
+    {
+      "name": "适用场景区",
+      "y": 2050,
+      "height": 400
+    },
+    {
+      "name": "客户案例区",
+      "y": 2450,
+      "height": 400
+    },
+    {
+      "name": "技术参数区",
+      "y": 2850,
+      "height": 350
+    },
+    {
+      "name": "底部CTA区",
+      "y": 2700,
+      "height": 300
+    }
+  ]
+}
